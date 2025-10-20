@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Experimenting With HTML Tags</title>
+    <style>
+      canvas {
+        border: 2px solid black;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -53,9 +58,21 @@
     <script>
       const canvas = document.getElementById("drawing");
       const ctx = canvas.getContext("2d");
-      ctx.fillStyle = "green";
-      ctx.fillRect(10, 10, 200, 100);
+      let isDrawing = false;
+      canvas.addEventListener("mousedown", (e) => {
+        isDrawing = true;
+        ctx.beginPath();
+        ctx.moveTo(e.offsetX, e.offsetY);
+      });
+      canvas.addEventListener("mousemove", (e) => {
+        if (!isDrawing) return;
+        ctx.lineTo(e.offsetX, e.offsetY);
+        ctx.stroke();
+      });
+      canvas.addEventListener("mouseup", () => {
+        isDrawing = false;
+      });
     </script>
+    <noscript> You need JS to see the canvas! </noscript>
   </body>
-  <noscript> You need JS to see the canvas! </noscript>
 </html>
