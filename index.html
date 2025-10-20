@@ -1,9 +1,9 @@
 <!-- landing page -->
 <!DOCTYPE html>
-<html lang="'en">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-wideth, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ada's Portfolio</title>
     <!--icon-->
     <link rel="icon" href="/assets/heart.png" sizes="any" />
@@ -53,54 +53,58 @@
               logo
             </text>
           </svg>
-          <!-- should appear when user hovers over logo-->
-          <dialog open>
-            <form>
-              <p>Help me out with some user feedback!</p>
-              <fieldset>
-                <legend>How did you find this website?</legend>
-
-                <input type="radio" id="linkedin" name="linkedin" />
-                <label for="linkedin">LinkedIn</label>
-
-                <input type="radio" id="grassroots" name="grassroots" />
-                <label for="grassroots">word of mouth</label>
-
-                <input type="radio" id="search-engine" name="search-engine" />
-                <label for="search-engine">search engine</label>
-
-                <input type="radio" id="other" name="other" />
-                <label for="other">other: </label>
-                <input type="text" id="other-text" />
-              </fieldset>
-              <fieldset>
-                <legend>What feedback for improvement do you have?</legend>
-                <textarea placeholder="Share any comment here..."> </textarea>
-              </fieldset>
-              <button>submit</button>
-            </form>
-            <noscript> please enable javascript! </noscript>
-          </dialog>
         </a>
+        <!-- should appear when user hovers over logo-->
+        <dialog open>
+          <form>
+            <p>Help me out with some user feedback!</p>
+            <fieldset>
+              <legend>How did you find this website?</legend>
+
+              <input type="radio" id="linkedin" name="linkedin" />
+              <label for="linkedin">LinkedIn</label>
+
+              <input type="radio" id="grassroots" name="grassroots" />
+              <label for="grassroots">word of mouth</label>
+
+              <input type="radio" id="search-engine" name="search-engine" />
+              <label for="search-engine">search engine</label>
+
+              <input type="radio" id="other" name="other" />
+              <label for="other">other: </label>
+              <input type="text" id="other-text" />
+            </fieldset>
+            <fieldset>
+              <legend>What feedback for improvement do you have?</legend>
+              <textarea placeholder="Share any comment here..."> </textarea>
+            </fieldset>
+            <button>submit</button>
+          </form>
+          <noscript> please enable javascript! </noscript>
+        </dialog>
         <a href="./soapbox.html"> Soapbox </a>
         <a href="./contactme.html"> Contact Me </a>
         <a href="./experiments.html"> Experiments </a>
       </nav>
-      <hgroup>
-        <article>
+      <section>
+        <hgroup>
           <h3>the archives of</h3>
           <h1>ada he.</h1>
-        </article>
+        </hgroup>
         <picture>
-          <img src="../assets/RAphoto.jpg" height="300" />
+          <img
+            src="../assets/RAphoto.jpg"
+            height="300"
+            alt="profile photo of Ada looking at books"
+          />
         </picture>
-      </hgroup>
+      </section>
     </header>
     <main>
       <article>
         <h3>Browse the shelves...</h3>
       </article>
-      <section>
+      <div class="projects">
         <project-card>
           <p>Title</p>
           <p>description</p>
@@ -113,7 +117,7 @@
           <p>Title</p>
           <p>description</p>
         </project-card>
-      </section>
+      </div>
     </main>
     <footer>
       <a href="https://www.instagram.com/contemplativemimosa/">
@@ -122,7 +126,7 @@
           height="60"
           src="https://img.icons8.com/ios-glyphs/60/instagram-new.png"
           alt="instagram-new"
-        />
+        >
       </a>
       <a href="https://www.linkedin.com/in/adahe0908/">
         <img
@@ -130,7 +134,7 @@
           height="60"
           src="https://img.icons8.com/ios-glyphs/60/linkedin.png"
           alt="linkedin"
-        />
+        >
       </a>
       <a href="./contactme.html"> Contact Me. </a>
     </footer>
