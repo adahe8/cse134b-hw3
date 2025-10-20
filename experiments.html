@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Experimenting With HTML Tags</title>
   </head>
   <body>
     <header>
@@ -40,21 +41,21 @@
         <p>Blog content. Lorem ipsum dolor sit amet.</p>
       </template>
       <picture>
-        <img src="/assets/heart.png" alt="blue heart">
+        <img src="/assets/heart.png" alt="blue heart" />
       </picture>
       <audio controls src="/assets/guitar-sound.mp3"></audio>
-      <video height="300px">
-        <source src="/assets/bridge.mp4">
-        <source src="/assets/bridge.webm">
+      <video height="300">
+        <source src="/assets/bridge.mp4" />
+        <source src="/assets/bridge.webm" />
       </video>
       <canvas id="drawing"> This is space to make graphics. </canvas>
     </main>
+    <script>
+      const canvas = document.getElementById("drawing");
+      const ctx = canvas.getContext("2d");
+      ctx.fillStyle = "green";
+      ctx.fillRect(10, 10, 200, 100);
+    </script>
   </body>
-  <script>
-    const canvas = document.getElementById("drawing");
-    const ctx = canvas.getContext("2d");
-    ctx.fillStyle = "green";
-    ctx.fillRect(10, 10, 200, 100);
-  </script>
   <noscript> You need JS to see the canvas! </noscript>
 </html>
