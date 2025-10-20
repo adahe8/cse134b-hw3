@@ -1,0 +1,138 @@
+<!-- landing page -->
+<!DOCTYPE html>
+<html lang="'en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-wideth, initial-scale=1.0" />
+    <title>Ada's Portfolio</title>
+    <!--icon-->
+    <link rel="icon" href="/assets/heart.png" sizes="any" />
+    <style>
+      nav,
+      footer {
+        border: 3px solid black;
+      }
+      article {
+        border: 2px solid black;
+        background-color: lightgray;
+      }
+      /** custom component CSS */
+      project-card {
+        display: flex;
+        flex-direction: column;
+        border: 2px solid black;
+        background-color: lightgray;
+        height: 200px;
+        width: 150px;
+        margin: 20px;
+      }
+    </style>
+    <script>
+      class HelloWorldElement extends HTMLElement {
+        constructor() {
+          super();
+          console.log("Hello world!");
+        }
+      }
+      customElements.define("hello-world", HelloWorldElement);
+    </script>
+  </head>
+  <body>
+    <header>
+      <hello-world></hello-world>
+      <nav>
+        <a href="./index.html">
+          <svg height="100" width="200">
+            <rect x="10" y="10" width="180" height="80" fill="lightgray" />
+            <text
+              x="100"
+              y="55"
+              text-anchor="middle"
+              alignment-baseline="middle"
+            >
+              logo
+            </text>
+          </svg>
+          <!-- should appear when user hovers over logo-->
+          <dialog open>
+            <form>
+              <p>Help me out with some user feedback!</p>
+              <fieldset>
+                <legend>How did you find this website?</legend>
+
+                <input type="radio" id="linkedin" name="linkedin" />
+                <label for="linkedin">LinkedIn</label>
+
+                <input type="radio" id="grassroots" name="grassroots" />
+                <label for="grassroots">word of mouth</label>
+
+                <input type="radio" id="search-engine" name="search-engine" />
+                <label for="search-engine">search engine</label>
+
+                <input type="radio" id="other" name="other" />
+                <label for="other">other: </label>
+                <input type="text" id="other-text" />
+              </fieldset>
+              <fieldset>
+                <legend>What feedback for improvement do you have?</legend>
+                <textarea placeholder="Share any comment here..."> </textarea>
+              </fieldset>
+              <button>submit</button>
+            </form>
+            <noscript> please enable javascript! </noscript>
+          </dialog>
+        </a>
+        <a href="./soapbox.html"> Soapbox </a>
+        <a href="./contactme.html"> Contact Me </a>
+        <a href="./experiments.html"> Experiments </a>
+      </nav>
+      <hgroup>
+        <article>
+          <h3>the archives of</h3>
+          <h1>ada he.</h1>
+        </article>
+        <picture>
+          <img src="../assets/RAphoto.jpg" height="300" />
+        </picture>
+      </hgroup>
+    </header>
+    <main>
+      <article>
+        <h3>Browse the shelves...</h3>
+      </article>
+      <section>
+        <project-card>
+          <p>Title</p>
+          <p>description</p>
+        </project-card>
+        <project-card>
+          <p>Title</p>
+          <p>description</p>
+        </project-card>
+        <project-card>
+          <p>Title</p>
+          <p>description</p>
+        </project-card>
+      </section>
+    </main>
+    <footer>
+      <a href="https://www.instagram.com/contemplativemimosa/">
+        <img
+          width="60"
+          height="60"
+          src="https://img.icons8.com/ios-glyphs/60/instagram-new.png"
+          alt="instagram-new"
+        />
+      </a>
+      <a href="https://www.linkedin.com/in/adahe0908/">
+        <img
+          width="60"
+          height="60"
+          src="https://img.icons8.com/ios-glyphs/60/linkedin.png"
+          alt="linkedin"
+        />
+      </a>
+      <a href="./contactme.html"> Contact Me. </a>
+    </footer>
+  </body>
+</html>

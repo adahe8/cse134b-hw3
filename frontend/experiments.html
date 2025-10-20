@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="./index.html">
+          <svg height="100" width="200">
+            <rect x="10" y="10" width="180" height="80" fill="lightgray" />
+            <text
+              x="100"
+              y="55"
+              text-anchor="middle"
+              alignment-baseline="middle"
+            >
+              logo
+            </text>
+          </svg>
+        </a>
+        <a href="./soapbox.html"> Soapbox </a>
+        <a href="./contactme.html"> Contact Me </a>
+        <a href="./experiments.html"> Experiments </a>
+      </nav>
+      <hgroup>
+        <h1>Experiments Page</h1>
+        <p>To test out other html tags</p>
+      </hgroup>
+    </header>
+    <main>
+      <!-- template for blog pages -->
+      <template>
+        <hgroup>
+          <h1>Title</h1>
+          <time datetime="2025-10-20">October 20, 2025</time>
+          <p>Short catchphrase/ description.</p>
+        </hgroup>
+        <p>Blog content. Lorem ipsum dolor sit amet.</p>
+      </template>
+      <picture>
+        <img src="/assets/heart.png" alt="blue heart" />
+      </picture>
+      <audio controls src="/assets/guitar-sound.mp3"></audio>
+      <video height="300px">
+        <source src="/assets/bridge.mp4" />
+        <source src="/assets/bridge.webm" />
+      </video>
+      <canvas id="drawing"> This is space to make graphics. </canvas>
+    </main>
+  </body>
+  <script>
+    const canvas = document.getElementById("drawing");
+    const ctx = canvas.getContext("2d");
+    ctx.fillStyle = "green";
+    ctx.fillRect(10, 10, 200, 100);
+  </script>
+  <noscript> You need JS to see the canvas! </noscript>
+</html>
