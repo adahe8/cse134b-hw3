@@ -16,15 +16,20 @@
         border: 2px solid black;
         background-color: lightgray;
       }
+      /**use to organize project grid*/
+      div{
+        display: flex;
+      }
       /** custom component CSS */
       project-card {
         display: flex;
         flex-direction: column;
         border: 2px solid black;
         background-color: lightgray;
-        height: 200px;
-        width: 150px;
+        height: 330px;
+        width: 200px;
         margin: 20px;
+        padding: 10px;
       }
     </style>
     <script>
@@ -36,6 +41,8 @@
       }
       customElements.define("hello-world", HelloWorldElement);
     </script>
+    <!--placeholder for index.js src file-->
+    <script></script>
   </head>
   <body>
     <header>
@@ -83,14 +90,11 @@
           <noscript> please enable javascript! </noscript>
         </dialog>
         <a href="./soapbox.html"> Soapbox </a>
-        <a href="./contactme.html"> Contact Me </a>
         <a href="./experiments.html"> Experiments </a>
       </nav>
       <section>
-        <div>
-          <h3>the archives of</h3>
-          <h1>ada he.</h1>
-        </div>
+        <h3>the archives of</h3>
+        <h1>ada he.</h1>
         <picture>
           <img
             src="../assets/RAphoto.jpg"
@@ -106,37 +110,44 @@
       </article>
       <div class="projects">
         <project-card>
-          <p>Title</p>
-          <p>description</p>
+          <a href="https://github.com/adahe8/bizhacks">Asteria</a>
+          <p><small>June 2025</small></p>
+          <p><small>Genre(s): Web Dev, AI</small></p>
+          <p>short description of project</p>
+        </project-card>
+        <!-- the following 2 cards will need special case study pages since they are undeployed-->
+        <project-card>
+          <p>Endowments Webpages for UCSD Library</p>
+          <p><small>start date - completion date</small></p>
+          <p><small>Genre(s): webdev/design/AI</small></p>
+          <p>short description of project</p>
         </project-card>
         <project-card>
-          <p>Title</p>
-          <p>description</p>
-        </project-card>
-        <project-card>
-          <p>Title</p>
-          <p>description</p>
+          <p>24/7 Chat w/ a Librarian</p>
+          <p><small>start date - completion date</small></p>
+          <p><small>Genre(s): webdev/design/AI</small></p>
+          <p>short description of project</p>
         </project-card>
       </div>
     </main>
     <footer>
       <a href="https://www.instagram.com/contemplativemimosa/">
         <img
-          width="60"
-          height="60"
+          width="30"
+          height="30"
           src="https://img.icons8.com/ios-glyphs/60/instagram-new.png"
           alt="instagram-new"
         />
       </a>
       <a href="https://www.linkedin.com/in/adahe0908/">
         <img
-          width="60"
-          height="60"
+          width="30"
+          height="30"
           src="https://img.icons8.com/ios-glyphs/60/linkedin.png"
           alt="linkedin"
         />
       </a>
-      <a href="./contactme.html"> Contact Me. </a>
+      <a>ada.he0908@gmail.com</a>
     </footer>
   </body>
 </html>

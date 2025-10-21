@@ -4,51 +4,81 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ada's Portfolio</title>
+    <link rel="icon" href="/assets/heart.png" sizes="any" />
+    <style>
+      nav,
+      footer {
+        border: 2px solid black;
+      }
+      section {
+        border: 2px solid black;
+        display: flex;
+        background-color: #8f8f8f;
+        margin: 10px;
+      }
+      /** will style the article cards to be even height and width */
+      article {
+        border: 2px solid black;
+        margin: 20px;
+      }
+    </style>
   </head>
   <body>
+    <nav>
+      <a href="./index.html">
+        <svg height="100" width="200">
+          <rect x="10" y="10" width="180" height="80" fill="lightgray" />
+          <text x="100" y="55" text-anchor="middle" alignment-baseline="middle">
+            logo
+          </text>
+        </svg>
+      </a>
+      <a href="./soapbox.html"> Soapbox </a>
+      <a href="./experiments.html"> Experiments </a>
+    </nav>
     <header>
-      <nav>
-        <a href="./index.html">
-          <svg height="100" width="200">
-            <rect x="10" y="10" width="180" height="80" fill="lightgray" />
-            <text
-              x="100"
-              y="55"
-              text-anchor="middle"
-              alignment-baseline="middle"
-            >
-              logo
-            </text>
-          </svg>
-        </a>
-        <a href="./soapbox.html"> Soapbox </a>
-        <a href="./contactme.html"> Contact Me </a>
-        <a href="./experiments.html"> Experiments </a>
-      </nav>
       <h1>Soapbox Corner.</h1>
     </header>
-    <section>
-      <h2>Musings.</h2>
-      <article>
-        <h3>Reasons ot dislike React.</h3>
-        <a href="./blogpost1.html">Go to post.</a>
-      </article>
-    </section>
-    <section>
-      <!-- only using div hear to mark this 'title' section for special styling-->
-      <div>
+    <main>
+      <section>
+        <h2>Musings.</h2>
+        <article>
+          <h3>Reasons to hate React.</h3>
+          <a href="./blogpost1.html">Go to post.</a>
+        </article>
+      </section>
+      <section>
         <h2>Book Reviews.</h2>
-      </div>
-      <article>
-        <h3>My top 3 most disliked books</h3>
-        <a href="./most-disliked-books.html">Go to post.</a>
-      </article>
-    </section>
-    <section>
-      <h2>Writings.</h2>
-      <article>
-        <h3>TBD..</h3>
-      </article>
-    </section>
+        <article>
+          <h3>My top 3 most disliked books</h3>
+          <a href="./most-disliked-books.html">Go to post.</a>
+        </article>
+      </section>
+      <section>
+        <h2>Writings.</h2>
+        <article>
+          <h3>TBD..</h3>
+        </article>
+      </section>
+    </main>
+    <footer>
+      <a href="https://www.instagram.com/contemplativemimosa/">
+        <img
+          width="30"
+          height="30"
+          src="https://img.icons8.com/ios-glyphs/60/instagram-new.png"
+          alt="instagram-new"
+        />
+      </a>
+      <a href="https://www.linkedin.com/in/adahe0908/">
+        <img
+          width="30"
+          height="30"
+          src="https://img.icons8.com/ios-glyphs/60/linkedin.png"
+          alt="linkedin"
+        />
+      </a>
+      <a>ada.he0908@gmail.com</a>
+    </footer>
   </body>
 </html>
