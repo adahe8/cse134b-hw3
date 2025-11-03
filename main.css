@@ -1,11 +1,14 @@
 /** variables to use: no magic numbers here */
 :root {
-  --font-size-base: 16px;
-  --font-size-h1: 4rem;
-  --font-size-h2: 2.56rem;
-  --font-size-h3: 2rem;
+  --font-size-h1: 2.5rem;
+  --font-size-h2: 2rem;
+  --font-size-h3: 1.6rem;
   --font-size-big: 1.25rem;
-  --attention-size: 1.5rem;
+
+  --mobile-font-base: 12px;
+  --small-screen-breakpoint: 480px;
+  --tablet-breakpoint: 768px;
+  --laptop-breakpoint: 1280px;
 
   --spacing-size: 1.5rem;
   --gutter-size: 3rem;
@@ -13,7 +16,8 @@
 
   --footer-height: 4.5rem;
   --max-subheading-width: 40rem;
-  --home-img-width: 24rem;
+  --home-img-min-width: 250px;
+  --home-img-max-width: 28rem;
   --blob-min-width: 17.5rem;
   --blob-min-height: 18rem;
 
@@ -24,6 +28,7 @@
   --accent-2: #ffe0b6;
   --white-outline: #fff;
 }
+
 /** uploading custom font */
 @font-face {
   font-family: "KoPub Batang";
@@ -31,12 +36,13 @@
     url("assets/fonts/kopubbatang-regular.woff") format("woff");
 }
 
+/** universal styling */
 body {
+  width: 100%;
   margin: var(--spacing-size) 0 0 0;
   display: grid;
   row-gap: var(--spacing-size);
   font-family: "KoPub Batang", serif;
-  font-size: var(--font-size-base);
 }
 header {
   display: flex;
@@ -51,15 +57,13 @@ h1 {
   margin: 0;
   font-size: var(--font-size-h1);
 }
-
-/** reused element styling */
 footer {
   height: var(--footer-height);
   padding: 0 var(--gutter-size) 0 var(--gutter-size);
   position: fixed;
   inset: auto 0 0 0;
   background-color: var(--accent-1);
-  color: var(--white-outline);
+  color: white;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -76,7 +80,7 @@ nav {
   width: fit-content;
   border-radius: var(--corner-rounding);
   border-bottom-left-radius: 0;
-  background-color: var(--white-outline);
+  background-color: white;
   a:visited {
     color: black;
   }
@@ -85,22 +89,48 @@ nav {
     background-color: var(--accent-2);
   }
 }
-a {
-  font-size: var(--attention-size);
-}
-
 nav > img {
   position: absolute;
   left: 0;
   transform: translateX(-50%);
 }
 
-/** homepage specific styling*/
-#home-header {
-  display: flex;
-  flex-direction: row;
-  column-gap: var(--spacing-size);
+/** media queries for smaller screen sizes */
+@media screen and (max-width: 767px) {
+  html {
+    font-size: var(--mobile-font-base);
+  }
+  header,
+  main,
+  footer {
+    box-sizing: border-box;
+  }
+  h1 {
+    font-size: 20px;
+  }
+  h2 {
+    font-size: var(--font-size-big);
+  }
+  #home-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: var(--spacing-size);
+  }
 }
+@media screen and (min-width: 768px) {
+  #home-header {
+    display: flex;
+    flex-direction: row;
+    column-gap: var(--spacing-size);
+    h1 {
+      width: 100%;
+    }
+  }
+}
+
+/** homepage specific styling*/
 #home-header picture {
   display: flex;
   justify-content: center;
@@ -109,7 +139,8 @@ nav > img {
   img {
     height: auto;
     width: 90%;
-    max-width: var(--home-img-width);
+    min-width: var(--home-img-min-width);
+    max-width: var(--home-img-max-width);
   }
 }
 #home-header hgroup {
@@ -118,12 +149,8 @@ nav > img {
   justify-content: center;
   align-items: center;
   width: 66%;
-  h1 {
-    width: 100%;
-  }
   p {
     display: flex;
-    font-size: var(--font-size-big);
     max-width: var(--max-subheading-width);
     align-self: flex-start;
   }
@@ -144,7 +171,7 @@ nav > img {
 /** styling the site map blobs */
 .landing-blob {
   text {
-    font-size: var(--font-size-h2);
+    font-size: var(--font-size-h1);
   }
 }
 .gradient-top {
@@ -155,4 +182,3 @@ nav > img {
 }
 
 /** about page specific styling */
-
