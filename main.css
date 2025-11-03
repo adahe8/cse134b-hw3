@@ -39,7 +39,7 @@
 /** universal styling */
 body {
   width: 100%;
-  margin: var(--spacing-size) 0 0 0;
+  padding: var(--spacing-size) 0 var(--footer-height) 0;
   display: grid;
   row-gap: var(--spacing-size);
   font-family: "KoPub Batang", serif;
@@ -70,6 +70,7 @@ footer {
   justify-content: space-between;
 }
 nav {
+  font-size: var(--font-size-big);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -94,6 +95,24 @@ nav > img {
   left: 0;
   transform: translateX(-50%);
 }
+a[data-current] {
+  background-color: var(--accent-2);
+}
+main img {
+  min-width: var(--home-img-min-width);
+  max-width: var(--home-img-max-width);
+}
+.imgfirst-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imgfirst-section picture {
+  img {
+    height: auto;
+    width: 100%;
+  }
+}
 
 /** media queries for smaller screen sizes */
 @media screen and (max-width: 767px) {
@@ -111,16 +130,17 @@ nav > img {
   h2 {
     font-size: var(--font-size-big);
   }
-  #home-header {
+  .imgfirst-section {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     row-gap: var(--spacing-size);
+  }
+  #additional-img {
+    display: none;
   }
 }
 @media screen and (min-width: 768px) {
-  #home-header {
+  .imgfirst-section {
     display: flex;
     flex-direction: row;
     column-gap: var(--spacing-size);
@@ -128,27 +148,25 @@ nav > img {
       width: 100%;
     }
   }
+  .textfirst-section {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    place-items: center;
+    gap: var(--spacing-size);
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
 }
 
 /** homepage specific styling*/
-#home-header picture {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 33%;
-  img {
-    height: auto;
-    width: 90%;
-    min-width: var(--home-img-min-width);
-    max-width: var(--home-img-max-width);
-  }
-}
-#home-header hgroup {
+.imgfirst-section hgroup {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 66%;
+  width: 80%;
   p {
     display: flex;
     max-width: var(--max-subheading-width);
@@ -161,7 +179,6 @@ nav > img {
   flex-wrap: wrap;
   justify-content: center;
   row-gap: var(--spacing-size);
-  margin-bottom: var(--footer-height);
   a {
     width: 33%;
     min-height: var(--blob-min-height);
