@@ -5,7 +5,6 @@
   --font-size-h3: 1.6rem;
   --font-size-big: 1.25rem;
 
-  --mobile-font-base: 12px;
   --small-screen-breakpoint: 480px;
   --tablet-breakpoint: 768px;
   --laptop-breakpoint: 1280px;
@@ -79,9 +78,16 @@ nav {
   column-gap: var(--spacing-size);
   position: relative;
   width: fit-content;
+  height: 2rem;
   border-radius: var(--corner-rounding);
   border-bottom-left-radius: 0;
   background-color: white;
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
   a:visited {
     color: black;
   }
@@ -116,16 +122,10 @@ main img {
 
 /** media queries for smaller screen sizes */
 @media screen and (max-width: 767px) {
-  html {
-    font-size: var(--mobile-font-base);
-  }
   header,
   main,
   footer {
     box-sizing: border-box;
-  }
-  h1 {
-    font-size: 20px;
   }
   h2 {
     font-size: var(--font-size-big);
@@ -198,4 +198,4 @@ main img {
   stop-color: var(--pale-blue);
 }
 
-/** about page specific styling */
+/** styling title-picture overlays */
