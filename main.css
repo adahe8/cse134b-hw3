@@ -1,1 +1,131 @@
+/** variables to use: no magic numbers here */
+:root {
+  --font-size-base: 16px;
+  --font-size-big: 1.25rem;
+  --font-size-h1: 4rem;
+  --font-size-h2: 3.2rem;
+  --font-size-h3: 2.56rem;
+  --heading-weight: 400px;
+  --spacing-size: 1.5rem;
+  --max-subheading-width: 40rem;
+  --gutter-size: 3rem;
+  --footer-height: 4.5rem;
+  --home-img-width: 24rem;
+  --blob-min-width: 17.5rem;
+  --blob-min-height: 18rem;
+  --shape-fill-gradient: linear-gradient(180deg, #fcf4e9 0%, #90c6f0 100%);
+  --pale-blue: #90c6f0;
+  --pale-peach: #fcf4e9;
+  --accent-1: #0163d2;
+  --accent-2: #ffe0b6;
+  --white-outline: #fff;
+}
+/** uploading custom font */
+@font-face {
+  font-family: "KoPub Batang";
+  src: url("assets/fonts/kopubbatang-regular.woff2") format("woff2"),
+    url("assets/fonts/kopubbatang-regular.woff") format("woff");
+}
 
+body {
+  margin-top: var(--spacing-size);
+  display: grid;
+  row-gap: var(--spacing-size);
+  font-family: "KoPub Batang", serif;
+  font-size: var(--font-size-base);
+}
+header {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--spacing-size);
+  margin: 0 var(--gutter-size);
+}
+main {
+  margin: var(--spacing-size) var(--gutter-size) 0 var(--gutter-size);
+}
+h1 {
+  margin: 0;
+  font-size: var(--font-size-h1);
+}
+
+/** reused element styling */
+footer {
+  height: var(--footer-height);
+  padding: 0 var(--gutter-size) 0 var(--gutter-size);
+  position: fixed;
+  inset: auto 0 0 0;
+  background-color: var(--accent-1);
+  color: var(--white-outline);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/** homepage specific styling*/
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  p {
+    padding: 0 var(--spacing-size);
+  }
+}
+
+#home-header {
+  display: flex;
+  flex-direction: row;
+  column-gap: var(--spacing-size);
+}
+#home-header picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 33%;
+  img {
+    height: auto;
+    width: 90%;
+    max-width: var(--home-img-width);
+  }
+}
+#home-header hgroup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 66%;
+  h1 {
+    width: 100%;
+  }
+  p {
+    display: flex;
+    font-size: var(--font-size-big);
+    max-width: var(--max-subheading-width);
+    align-self: flex-start;
+  }
+}
+#landing-main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: var(--spacing-size);
+  margin-bottom: var(--footer-height);
+  a {
+    width: 33%;
+    min-height: var(--blob-min-height);
+    min-width: var(--blob-min-width);
+  }
+}
+/** Time to start styling blobs */
+.landing-blob {
+  text {
+    font-size: var(--font-size-h3);
+  }
+}
+.gradienttop {
+  stop-color: var(--pale-peach);
+}
+.gradientbottom {
+  stop-color: var(--pale-blue);
+}
