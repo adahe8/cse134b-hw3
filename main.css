@@ -1,18 +1,22 @@
 /** variables to use: no magic numbers here */
 :root {
   --font-size-base: 16px;
-  --font-size-big: 1.25rem;
   --font-size-h1: 4rem;
-  --font-size-h2: 3.2rem;
-  --font-size-h3: 2.56rem;
-  --heading-weight: 400px;
+  --font-size-h2: 2.56rem;
+  --font-size-h3: 2rem;
+  --font-size-big: 1.25rem;
+  --attention-size: 1.5rem;
+
   --spacing-size: 1.5rem;
-  --max-subheading-width: 40rem;
   --gutter-size: 3rem;
+  --corner-rounding: 1.25rem;
+
   --footer-height: 4.5rem;
+  --max-subheading-width: 40rem;
   --home-img-width: 24rem;
   --blob-min-width: 17.5rem;
   --blob-min-height: 18rem;
+
   --shape-fill-gradient: linear-gradient(180deg, #fcf4e9 0%, #90c6f0 100%);
   --pale-blue: #90c6f0;
   --pale-peach: #fcf4e9;
@@ -28,7 +32,7 @@
 }
 
 body {
-  margin-top: var(--spacing-size);
+  margin: var(--spacing-size) 0 0 0;
   display: grid;
   row-gap: var(--spacing-size);
   font-family: "KoPub Batang", serif;
@@ -61,17 +65,37 @@ footer {
   align-items: center;
   justify-content: space-between;
 }
-
-/** homepage specific styling*/
 nav {
   display: flex;
   flex-direction: row;
   align-items: center;
-  p {
-    padding: 0 var(--spacing-size);
+  margin-left: var(--gutter-size);
+  padding: 0 var(--gutter-size);
+  column-gap: var(--spacing-size);
+  position: relative;
+  width: fit-content;
+  border-radius: var(--corner-rounding);
+  border-bottom-left-radius: 0;
+  background-color: var(--white-outline);
+  a:visited {
+    color: black;
+  }
+  a:hover,
+  a:active {
+    background-color: var(--accent-2);
   }
 }
+a {
+  font-size: var(--attention-size);
+}
 
+nav > img {
+  position: absolute;
+  left: 0;
+  transform: translateX(-50%);
+}
+
+/** homepage specific styling*/
 #home-header {
   display: flex;
   flex-direction: row;
@@ -117,15 +141,18 @@ nav {
     min-width: var(--blob-min-width);
   }
 }
-/** Time to start styling blobs */
+/** styling the site map blobs */
 .landing-blob {
   text {
-    font-size: var(--font-size-h3);
+    font-size: var(--font-size-h2);
   }
 }
-.gradienttop {
+.gradient-top {
   stop-color: var(--pale-peach);
 }
-.gradientbottom {
+.gradient-bottom {
   stop-color: var(--pale-blue);
 }
+
+/** about page specific styling */
+
