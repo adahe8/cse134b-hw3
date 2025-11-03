@@ -8,8 +8,9 @@
     <link rel="icon" href="assets/heart.png" sizes="any" />
     <link rel="stylesheet" href="main.css" />
     <style>
-      body {
-        background-color: var(--shape-fill-gradient);
+      html {
+        background: linear-gradient(180deg, #90c6f0 0%, #fcf4e9 100%);
+        min-height: 100vh;
       }
     </style>
   </head>
@@ -19,13 +20,15 @@
         <img src="assets/logo.png" alt="blue heart logo" />
         <a href="index.html">Home</a>
         <a href="aboutme.html">About Me</a>
-        <a href="projects.html">Projects</a>
+        <a href="projects.html" data-current>Projects</a>
       </nav>
       <section id="project-header">
-        <img
-          src="assets/projectsphoto.png"
-          alt="From left to right, Ada and her friends Ethan and Hannah working on a hackathon project around a single laptop."
-        />
+        <picture>
+          <img
+            src="assets/projectsphoto.png"
+            alt="From left to right, Ada and her friends Ethan and Hannah working on a hackathon project around a single laptop."
+          />
+        </picture>
         <h1>Projects</h1>
       </section>
     </header>
