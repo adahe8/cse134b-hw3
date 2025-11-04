@@ -291,6 +291,14 @@ subject-tag {
 .ai {
   background-color: var(--pale-blue);
 }
+
+/** fallbacks if browser doesn't support color - trying out 2 of my fave colors in hsl */
+.frontend {
+  background-color: hsl(16, 100%, 66%);
+}
+.ui {
+  background-color: hsl(300, 26%, 71%);
+}
 /** experimenting with higher gamut colors */
 @supports (color: color(display-p3 1 1 1)) {
   .frontend {
@@ -299,11 +307,4 @@ subject-tag {
   .ui {
     background-color: color(display-p3 0.784 0.635 0.784);
   }
-}
-/** fallbacks if browser doesn't support color - trying out 2 of my fave colors in hsl */
-.frontend {
-  background-color: hsl(16, 100%, 66%);
-}
-.ui {
-  background-color: hsl(300, 26%, 71%);
 }
