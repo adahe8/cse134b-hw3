@@ -12,6 +12,7 @@
         min-height: 100vh;
       }
     </style>
+    <!-- I will add script to make the project-cards clickable -->
   </head>
   <body>
     <header>
@@ -20,6 +21,7 @@
         <a href="index.html">Home</a>
         <a href="aboutme.html">About Me</a>
         <a href="projects.html" data-current>Projects</a>
+        <a href="assets/Ada_resume.pdf">Resume</a>
       </nav>
       <section class="image-text-header" id="project-header">
         <picture>
@@ -33,24 +35,29 @@
     </header>
     <main id="projects-main">
       <project-card>
-        <div class="projectdisplay">
+        <div id="asteria" class="projectdisplay">
           <subject-tag class="ai">ai</subject-tag>
           <subject-tag class="fullstack">fullstack</subject-tag>
         </div>
-        <p>Asteria | Infosys BizHacks 2025</p>
+        <a
+          href="https://github.com/adahe8/bizhacks?tab=readme-ov-file#asteria---omni-channel-marketing-campaign-management-system"
+          >Asteria | Infosys BizHacks 2025</a
+        >
       </project-card>
       <project-card>
-        <div class="projectdisplay">
+        <div id="chat-feature" class="projectdisplay">
           <subject-tag class="ui">ui/ux</subject-tag>
         </div>
-        <p>Chat with a Librarian Widget | UC San Diego Library</p>
+        <a href="https://library.ucsd.edu/"
+          >Chat with a Librarian Widget | UC San Diego Library</a
+        >
       </project-card>
       <project-card>
-        <div class="projectdisplay">
+        <div id="endowments" class="projectdisplay">
           <subject-tag class="ui">ui/ux</subject-tag>
           <subject-tag class="frontend">frontend</subject-tag>
         </div>
-        <p>Endowments Webpages | UC San Diego Library</p>
+        <a>Endowments Webpages | UC San Diego Library</a>
       </project-card>
     </main>
     <footer>

@@ -88,12 +88,12 @@ nav {
     justify-content: center;
     align-items: center;
     height: 100%;
+    transition: color 0.3s ease;
   }
   a:visited {
     color: black;
   }
-  a:hover,
-  a:active {
+  a:hover {
     background-color: var(--accent-2);
   }
 }
@@ -239,9 +239,6 @@ main img {
 }
 
 /** projects page-specific styling */
-#projects-main {
-  flex: 1;
-}
 /** custom component styling */
 project-card {
   background-color: gray;
@@ -250,7 +247,7 @@ project-card {
   justify-content: space-between;
   aspect-ratio: 3 / 2;
   min-width: var(--home-img-min-width);
-  p {
+  a {
     display: flex;
     align-items: center;
     height: 3rem;
@@ -261,7 +258,19 @@ project-card {
   }
   .projectdisplay {
     padding: var(--spacing-size);
+    height: 100%;
+    background-position: center;
+    background-size: cover;
   }
+}
+#chat-feature {
+  background-image: url(assets/library-with-chat.png);
+}
+#endowments {
+  background-image: url(assets/endowments-display.png);
+}
+#asteria {
+  background-image: url(assets/asteria.png);
 }
 subject-tag {
   border-radius: 10px;
