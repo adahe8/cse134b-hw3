@@ -284,15 +284,25 @@ subject-tag {
   border-radius: 10px;
   padding: 0.25rem;
 }
-.ui {
-  background-color: hsl(300, 25.7%, 71%);
-}
 .fullstack {
   background-color: var(--accent-2);
 }
 .ai {
   background-color: var(--pale-blue);
 }
+/** experimenting with higher gamut colors */
+@supports (color: color(display-p3 1 1 1)) {
+  .frontend {
+    background-color: color(display-p3 1 0.4 0.1);
+  }
+  .ui {
+    background-color: color(display-p3 0.784 0.635 0.784);
+  }
+}
+/** fallbacks if browser doesn't support color - trying out 2 of my fave colors in hsl */
 .frontend {
-  background-color: hsl(354.4, 76.2%, 91.8%);
+  background-color: hsl(16, 100%, 66%);
+}
+.ui {
+  background-color: hsl(300, 26%, 71%);
 }
