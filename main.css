@@ -51,7 +51,7 @@ header {
   margin: 0 var(--gutter-size);
 }
 main {
-  margin: var(--spacing-size) var(--gutter-size) 0 var(--gutter-size);
+  margin: var(--spacing-size) var(--gutter-size);
 }
 h1 {
   margin: 0;
@@ -79,14 +79,12 @@ nav {
   column-gap: var(--spacing-size);
   position: relative;
   width: fit-content;
-  height: 2rem;
+  height: 2.5rem;
   border-radius: var(--corner-rounding);
   border-bottom-left-radius: 0;
   background-color: white;
   a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    align-content: center;
     height: 100%;
     transition: color 0.3s ease;
   }
@@ -248,12 +246,10 @@ project-card {
   aspect-ratio: 3 / 2;
   min-width: var(--home-img-min-width);
   a {
-    display: flex;
-    align-items: center;
     height: 3rem;
+    align-content: center;
     box-sizing: border-box;
     padding: 0 var(--spacing-size);
-    margin: 0;
     background-color: white;
   }
   .projectdisplay {
