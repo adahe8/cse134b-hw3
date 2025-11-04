@@ -5,10 +5,6 @@
   --font-size-h3: 1.6rem;
   --font-size-big: 1.25rem;
 
-  --small-screen-breakpoint: 480px;
-  --tablet-breakpoint: 768px;
-  --laptop-breakpoint: 1280px;
-
   --spacing-size: 1.5rem;
   --gutter-size: 3rem;
   --corner-rounding: 1.25rem;
@@ -19,6 +15,12 @@
   --home-img-max-width: 28rem;
   --blob-min-width: 17.5rem;
   --blob-min-height: 18rem;
+
+  --card-ratio: 3 / 2;
+  --project-card-width: 25rem;
+  --project-label-height: 3rem;
+  --tag-padding: 0.25rem;
+  --tag-rounding: 10px;
 
   --shape-fill-gradient: linear-gradient(180deg, #fcf4e9 0%, #90c6f0 100%);
   --pale-blue: #90c6f0;
@@ -174,7 +176,7 @@ main img {
     align-items: center;
   }
   project-card {
-    width: 25rem;
+    width: var(--project-card-width);
   }
 }
 
@@ -221,7 +223,6 @@ main img {
   position: relative;
   text-align: center;
   h1 {
-    font-weight: 400;
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -243,10 +244,10 @@ project-card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  aspect-ratio: 3 / 2;
+  aspect-ratio: var(--card-ratio);
   min-width: var(--home-img-min-width);
   a {
-    height: 3rem;
+    height: var(--project-label-height);
     align-content: center;
     box-sizing: border-box;
     padding: 0 var(--spacing-size);
@@ -281,8 +282,8 @@ project-card {
   );
 }
 subject-tag {
-  border-radius: 10px;
-  padding: 0.25rem;
+  border-radius: var(--tag-rounding);
+  padding: var(--tag-padding);
 }
 .fullstack {
   background-color: var(--accent-2);
