@@ -37,6 +37,7 @@
 
 /** universal styling */
 body {
+  margin: 0;
   width: 100%;
   padding: var(--spacing-size) 0 var(--footer-height) 0;
   display: grid;
@@ -113,8 +114,10 @@ main img {
   justify-content: center;
   align-items: center;
 }
-.imgfirst-section picture {
-  img {
+.imgfirst-section picture,
+.textfirst-section {
+  img,
+  source {
     height: auto;
     width: 100%;
   }
@@ -138,6 +141,15 @@ main img {
   #additional-img {
     display: none;
   }
+  #projects-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: var(--spacing-size);
+  }
+  project-card {
+    width: 80%;
+  }
 }
 @media screen and (min-width: 768px) {
   .imgfirst-section {
@@ -153,10 +165,18 @@ main img {
     grid-template-columns: 2fr 1fr;
     place-items: center;
     gap: var(--spacing-size);
-    img {
-      width: 100%;
-      height: auto;
-    }
+  }
+  #projects-main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: var(--spacing-size);
+    row-gap: var(--spacing-size);
+    justify-content: center;
+    align-items: center;
+  }
+  project-card {
+    width: 25rem;
   }
 }
 
@@ -199,3 +219,63 @@ main img {
 }
 
 /** styling title-picture overlays */
+.image-text-header {
+  position: relative;
+  text-align: center;
+  h1 {
+    font-weight: 400;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, 1px -1px 0 #fff,
+      -1px 1px 0 #fff, 1px 1px 0 #fff;
+  }
+  img,
+  source {
+    width: 80%;
+    height: auto;
+  }
+}
+
+/** projects page-specific styling */
+#projects-main {
+  flex: 1;
+}
+/** custom component styling */
+project-card {
+  background-color: gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  aspect-ratio: 3 / 2;
+  min-width: var(--home-img-min-width);
+  p {
+    display: flex;
+    align-items: center;
+    height: 3rem;
+    box-sizing: border-box;
+    padding: 0 var(--spacing-size);
+    margin: 0;
+    background-color: white;
+  }
+  .projectdisplay {
+    padding: var(--spacing-size);
+  }
+}
+subject-tag {
+  border-radius: 10px;
+  padding: 0.25rem;
+}
+.ui {
+  background-color: hsl(300, 25.7%, 71%);
+}
+.fullstack {
+  background-color: var(--accent-2);
+}
+.ai {
+  background-color: var(--pale-blue);
+}
+.frontend {
+  background-color: hsl(354.4, 76.2%, 91.8%);
+}
