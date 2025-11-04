@@ -264,13 +264,25 @@ project-card {
   }
 }
 #chat-feature {
-  background-image: url(assets/library-with-chat.png);
+  background-image: image-set(
+    url(assets/library-with-chat.avif),
+    url(assets/library-with-chat.webp),
+    url(assets/library-with-chat.png)
+  );
 }
 #endowments {
-  background-image: url(assets/endowments-display.png);
+  background-image: image-set(
+    url(assets/endowments-display.avif),
+    url(assets/endowments-display.webp),
+    url(assets/endowments-display.png)
+  );
 }
 #asteria {
-  background-image: url(assets/asteria.png);
+  background-image: image-set(
+    url(assets/asteria.avif),
+    url(assets/asteria.webp),
+    url(assets/asteria.png)
+  );
 }
 subject-tag {
   border-radius: 10px;
